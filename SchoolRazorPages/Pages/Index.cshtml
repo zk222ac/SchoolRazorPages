@@ -1,0 +1,26 @@
+﻿@page   
+@model IndexModel
+@using SchoolRazorPages.Model 
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+    var id = Model.Student.Id;
+    var name = Model.Student.Name;
+    var imagePath = Model.Student.ImagePath;
+
+    // var student = (Student)ViewData["student"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Message"]</h1>
+</div>
+<div>
+    
+    <h6>Id is: @id </h6>
+    <h6>Name is: @name</h6>
+    <img src="@imagePath"/>   
+
+</div>
